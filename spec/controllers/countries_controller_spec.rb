@@ -19,8 +19,8 @@ describe CountriesController do
     describe "response body" do
       subject(:response_body) { shipping_rates; JSON.parse(response.body) }
 
-      specify { expect(response_body["regular"]).to eq rate.regular_shipping_rate }
-      specify { expect(response_body["express"]).to eq rate.express_shipping_rate }
+      specify { expect(response_body["regular"]).to eq rate.regular_rate }
+      specify { expect(response_body["express"]).to eq rate.express_rate }
     end
 
   end
