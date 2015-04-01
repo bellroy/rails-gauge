@@ -2,11 +2,13 @@ class CountriesController < ApplicationController
 
   def shipping_rates
     @country = Country.find_by_code(shipping_rates_params[:country_code])
+    @rate = Rate.where(:country => @country, :currency_code => shipping_rates_params[:currency_code]).first
+    
     respond_to do |format|
       format.json do
         render :json => {
-          :regular => @country.regular_shipping_rate,
-          :express => @country.express_shipping_rate
+          :regular => @rate.regular_shipping_rate,
+          :express => @rate.express_shipping_rate
         }
       end
     end
@@ -15,7 +17,7 @@ class CountriesController < ApplicationController
 private
 
   def shipping_rates_params
-    params.permit(:country_code)
+    params.permit(:country_code, :currency_code)
   end
 
 end
