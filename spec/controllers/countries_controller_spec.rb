@@ -7,11 +7,7 @@ describe CountriesController do
     let(:currency_code) {"EUR"}
     let!(:country)       { FactoryGirl.create :country, :code => code }
     let!(:rate) { FactoryGirl.create :shipping_rate, :currency_code => currency_code, :country => country }
-    # before(:each) do
-    #   FactoryGirl.create :country, :code => "US"
-    #   FactoryGirl.create :rate, :currency_code => "EUR", :country => country 
-    # end        
-
+    
     subject(:shipping_rates) { get :shipping_rates, :country_code => code, :currency_code => currency_code,  :format => :json }
 
     it { is_expected.to be_successful }
