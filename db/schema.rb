@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141006031825) do
+ActiveRecord::Schema.define(version: 20150401232855) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,10 +19,19 @@ ActiveRecord::Schema.define(version: 20141006031825) do
   create_table "countries", force: true do |t|
     t.string   "name"
     t.string   "code"
-    t.string   "regular_shipping_rate"
-    t.string   "express_shipping_rate"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "shipping_rates", force: true do |t|
+    t.string   "regular_rate"
+    t.string   "express_rate"
+    t.string   "currency_code"
+    t.integer  "country_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "shipping_rates", ["country_id"], name: "index_shipping_rates_on_country_id", using: :btree
 
 end

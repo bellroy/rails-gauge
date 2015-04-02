@@ -1,2 +1,5 @@
-Country.create(:name => "Australia", :code => "AU", :regular_shipping_rate => "20.00", :express_shipping_rate => "50.00")
-Country.create(:name => "United States", :code => "US", :regular_shipping_rate => "40.00", :express_shipping_rate => "60.00")
+australia = Country.create(:name => "Australia", :code => "AU")
+usa = Country.create(:name => "United States", :code => "US")
+ShippingRate.create(:currency_code => "EUR", :country => australia, :regular_rate => "20.00", :express_rate => "50.00")
+ShippingRate.create(:currency_code => "GBP", :country => australia, :regular_rate => "15.00", :express_rate => "30.00")
+ShippingRate.create(:currency_code => "EUR", :country => usa, :regular_rate => "22.00", :express_rate => "52.00")
