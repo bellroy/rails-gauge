@@ -11,6 +11,8 @@ gem 'spring',        :group => :development
 #
 gem 'pry',                    :group => [:development, :test, :staging]
 
+gem 'byebug', :group => [:development, :test]
+
 group :test do
   gem 'rspec-rails'
   gem 'database_cleaner'

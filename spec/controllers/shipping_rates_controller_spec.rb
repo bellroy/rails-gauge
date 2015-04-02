@@ -8,7 +8,6 @@ describe ShippingRatesController do
   let!(:second_rate) { FactoryGirl.create :shipping_rate, :currency_code => "USD", :country => country }
 
   describe "shipping_rates" do
-    
     subject(:shipping_rates) { get :shipping_rates, :country_code => code, :currency_code => currency_code,  :format => :json }
 
     it { is_expected.to be_successful }
@@ -23,7 +22,6 @@ describe ShippingRatesController do
   end
 
   describe "all_rates_for_country" do
-
     subject(:shipping_rates) { get :all_rates_for_country, :country_code => code, :format => :json }
 
     it { is_expected.to be_successful }

@@ -1,9 +1,9 @@
+#TODO : shipping rates and all_rates_for_country could be refactored into search method later
 class ShippingRatesController < ApplicationController
 
   def shipping_rates
     @country = Country.find_by_code(shipping_rates_params[:country_code])
     @shipping_rate = ShippingRate.where(:country => @country, :currency_code => shipping_rates_params[:currency_code]).first
-    
     respond_to do |format|
       format.json do
         render :json => {
@@ -14,11 +14,12 @@ class ShippingRatesController < ApplicationController
     end
   end
 
-  #ordered by currency_code by default
+  #ordered by currency_code by default for now
   def all_rates_for_country
     @country = Country.find_by_code(shipping_rates_params[:country_code])
     @shipping_rates = ShippingRate.where(:country => @country).order(:currency_code)
     
+    #TODO : serialization
     respond_to do |format|
       format.json do
         render :json => {
