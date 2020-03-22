@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.0'
+gem 'rails'
 
-gem 'pg', '~> 0.21'
+gem 'pg'
 
 gem 'spring', group: :development
 
