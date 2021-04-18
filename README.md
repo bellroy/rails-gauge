@@ -1,12 +1,12 @@
-# Bellroy Tech Team Trial Application
+# Rails Gauge
 
 ## About the app
-This app is designed to help us evaluate potential recruits.
+This app is designed to help us evaluate potential Rails developers.
 
 The app contains a single endpoint that returns shipping rates for a given country.
 
 ## Dependencies
-* ruby 2.1.x
+* ruby 2.6.5
 * bundler
 * postgres
 
