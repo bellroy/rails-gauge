@@ -8,7 +8,6 @@ gem 'spring', group: :development
 
 group :development, :test do
   gem 'pry'
-  gem 'reek'
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-rspec'

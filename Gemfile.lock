@@ -83,7 +83,6 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
-    kwalify (0.7.2)
     loofah (2.9.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -105,7 +104,6 @@ GEM
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    psych (3.3.1)
     racc (1.5.2)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -138,11 +136,6 @@ GEM
       thor (~> 1.0)
     rainbow (3.0.0)
     rake (13.0.3)
-    reek (6.0.3)
-      kwalify (~> 0.7.0)
-      parser (~> 3.0.0)
-      psych (~> 3.1)
-      rainbow (>= 2.0, < 4.0)
     regexp_parser (2.1.1)
     rexml (3.2.5)
     rspec-core (3.10.1)
@@ -204,7 +197,6 @@ DEPENDENCIES
   pg
   pry
   rails
-  reek
   rspec-rails
   rubocop
   rubocop-rspec
