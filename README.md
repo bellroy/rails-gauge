@@ -13,7 +13,7 @@ The app contains a single endpoint that returns shipping rates for a given count
 ## Setup
 
 ```
-  git clone git@github.com:tricycle/bellroy-tech-team-trial.git
+  git clone git@github.com:bellroy/bellroy-tech-team-trial.git
 
   bundle install
 
